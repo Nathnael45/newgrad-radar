@@ -1,0 +1,9 @@
+# personal
+profile.json
+state/
+output/
+.env
+# python
+__pycache__/
+*.pyc
+.DS_Store

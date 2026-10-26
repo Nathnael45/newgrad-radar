@@ -1,0 +1,542 @@
+{
+ "NYC": {
+  "label": "New York City metro",
+  "places": {
+   "ny": [
+    "new york",
+    "new york city",
+    "nyc",
+    "brooklyn",
+    "manhattan",
+    "queens",
+    "bronx",
+    "long island city"
+   ],
+   "nj": [
+    "jersey city",
+    "hoboken",
+    "newark"
+   ]
+  },
+  "any": [
+   "new york city",
+   "nyc",
+   "new york, ny",
+   "new york, new york"
+  ],
+  "exact": [
+   "new york",
+   "ny",
+   "nyc"
+  ]
+ },
+ "SF Bay": {
+  "label": "San Francisco Bay Area",
+  "places": {
+   "ca": [
+    "san francisco",
+    "palo alto",
+    "mountain view",
+    "sunnyvale",
+    "menlo park",
+    "redwood city",
+    "san mateo",
+    "cupertino",
+    "santa clara",
+    "san jose",
+    "fremont",
+    "oakland",
+    "berkeley",
+    "emeryville",
+    "foster city",
+    "burlingame",
+    "south san francisco",
+    "san bruno",
+    "milpitas",
+    "los gatos",
+    "pleasanton",
+    "hayward",
+    "los altos",
+    "belmont",
+    "san carlos",
+    "newark",
+    "san ramon",
+    "walnut creek",
+    "campbell",
+    "brisbane"
+   ]
+  },
+  "any": [
+   "bay area",
+   "sf bay",
+   "san francisco"
+  ],
+  "exact": [
+   "sf",
+   "palo alto",
+   "mountain view",
+   "sunnyvale",
+   "menlo park",
+   "redwood city",
+   "san mateo",
+   "san jose",
+   "santa clara",
+   "cupertino",
+   "oakland",
+   "berkeley"
+  ]
+ },
+ "Seattle": {
+  "label": "Seattle area",
+  "places": {
+   "wa": [
+    "seattle",
+    "bellevue",
+    "redmond",
+    "kirkland",
+    "bothell",
+    "renton",
+    "issaquah",
+    "sammamish",
+    "woodinville",
+    "lynnwood",
+    "tukwila"
+   ]
+  },
+  "any": [
+   "seattle",
+   "greater seattle"
+  ],
+  "exact": [
+   "seattle"
+  ]
+ },
+ "LA Metro": {
+  "label": "Los Angeles / Orange County",
+  "places": {
+   "ca": [
+    "los angeles",
+    "santa monica",
+    "culver city",
+    "playa vista",
+    "el segundo",
+    "pasadena",
+    "burbank",
+    "glendale",
+    "venice",
+    "marina del rey",
+    "long beach",
+    "hawthorne",
+    "torrance",
+    "manhattan beach",
+    "west hollywood",
+    "beverly hills",
+    "irvine",
+    "costa mesa",
+    "newport beach",
+    "santa ana",
+    "anaheim",
+    "carson",
+    "redondo beach",
+    "sherman oaks",
+    "van nuys",
+    "calabasas",
+    "thousand oaks",
+    "woodland hills"
+   ]
+  },
+  "any": [
+   "los angeles",
+   "greater los angeles"
+  ],
+  "exact": [
+   "la",
+   "los angeles"
+  ]
+ },
+ "DMV": {
+  "label": "Washington DC / Maryland / Northern Virginia",
+  "places": {
+   "va": [
+    "arlington",
+    "arlington county",
+    "alexandria",
+    "mclean",
+    "reston",
+    "herndon",
+    "tysons",
+    "tysons corner",
+    "vienna",
+    "fairfax",
+    "falls church",
+    "chantilly",
+    "sterling",
+    "ashburn",
+    "springfield",
+    "dulles",
+    "leesburg",
+    "manassas",
+    "crystal city"
+   ],
+   "md": [
+    "bethesda",
+    "rockville",
+    "silver spring",
+    "gaithersburg",
+    "college park",
+    "germantown",
+    "columbia",
+    "laurel",
+    "annapolis junction",
+    "fort meade",
+    "hanover",
+    "greenbelt",
+    "lanham",
+    "hyattsville",
+    "beltsville",
+    "north bethesda",
+    "chevy chase",
+    "frederick"
+   ]
+  },
+  "any": [
+   "washington, dc",
+   "washington dc",
+   "washington, d.c.",
+   "district of columbia",
+   "dc metro"
+  ],
+  "exact": [
+   "dc",
+   "washington d.c."
+  ]
+ },
+ "Boston": {
+  "label": "Boston area",
+  "places": {
+   "ma": [
+    "boston",
+    "cambridge",
+    "somerville",
+    "waltham",
+    "burlington",
+    "lexington",
+    "woburn",
+    "needham",
+    "newton",
+    "quincy",
+    "bedford",
+    "andover",
+    "north reading",
+    "marlborough",
+    "westford"
+   ]
+  },
+  "any": [
+   "boston"
+  ],
+  "exact": [
+   "boston"
+  ]
+ },
+ "Austin": {
+  "label": "Austin",
+  "places": {
+   "tx": [
+    "austin",
+    "round rock",
+    "cedar park",
+    "georgetown"
+   ]
+  },
+  "any": [
+   "austin, tx"
+  ],
+  "exact": [
+   "austin"
+  ]
+ },
+ "Chicago": {
+  "label": "Chicago area",
+  "places": {
+   "il": [
+    "chicago",
+    "evanston",
+    "oak brook",
+    "schaumburg",
+    "naperville",
+    "deerfield"
+   ]
+  },
+  "any": [
+   "chicago"
+  ],
+  "exact": [
+   "chicago"
+  ]
+ },
+ "Denver/Boulder": {
+  "label": "Denver / Boulder",
+  "places": {
+   "co": [
+    "denver",
+    "boulder",
+    "broomfield",
+    "englewood",
+    "greenwood village",
+    "louisville",
+    "westminster",
+    "aurora",
+    "lakewood",
+    "fort collins"
+   ]
+  },
+  "any": [
+   "denver"
+  ],
+  "exact": [
+   "denver",
+   "boulder"
+  ]
+ },
+ "Atlanta": {
+  "label": "Atlanta",
+  "places": {
+   "ga": [
+    "atlanta",
+    "alpharetta",
+    "sandy springs",
+    "marietta",
+    "duluth"
+   ]
+  },
+  "any": [
+   "atlanta"
+  ],
+  "exact": [
+   "atlanta"
+  ]
+ },
+ "Dallas": {
+  "label": "Dallas / Fort Worth",
+  "places": {
+   "tx": [
+    "dallas",
+    "plano",
+    "irving",
+    "frisco",
+    "richardson",
+    "fort worth",
+    "addison",
+    "westlake"
+   ]
+  },
+  "any": [
+   "dallas"
+  ],
+  "exact": [
+   "dallas"
+  ]
+ },
+ "Houston": {
+  "label": "Houston",
+  "places": {
+   "tx": [
+    "houston",
+    "the woodlands",
+    "sugar land",
+    "spring"
+   ]
+  },
+  "any": [
+   "houston"
+  ],
+  "exact": [
+   "houston"
+  ]
+ },
+ "Research Triangle": {
+  "label": "Raleigh / Durham / Chapel Hill",
+  "places": {
+   "nc": [
+    "raleigh",
+    "durham",
+    "chapel hill",
+    "cary",
+    "morrisville",
+    "research triangle park"
+   ]
+  },
+  "any": [
+   "research triangle"
+  ],
+  "exact": [
+   "raleigh",
+   "durham"
+  ]
+ },
+ "San Diego": {
+  "label": "San Diego",
+  "places": {
+   "ca": [
+    "san diego",
+    "la jolla",
+    "carlsbad",
+    "del mar"
+   ]
+  },
+  "any": [
+   "san diego"
+  ],
+  "exact": [
+   "san diego"
+  ]
+ },
+ "Philadelphia": {
+  "label": "Philadelphia area",
+  "places": {
+   "pa": [
+    "philadelphia",
+    "bala cynwyd",
+    "king of prussia",
+    "conshohocken",
+    "wayne",
+    "malvern"
+   ]
+  },
+  "any": [
+   "philadelphia"
+  ],
+  "exact": [
+   "philadelphia"
+  ]
+ },
+ "Pittsburgh": {
+  "label": "Pittsburgh",
+  "places": {
+   "pa": [
+    "pittsburgh"
+   ]
+  },
+  "any": [
+   "pittsburgh"
+  ],
+  "exact": [
+   "pittsburgh"
+  ]
+ },
+ "Portland": {
+  "label": "Portland, OR",
+  "places": {
+   "or": [
+    "portland",
+    "beaverton",
+    "hillsboro"
+   ]
+  },
+  "any": [
+   "portland, or"
+  ],
+  "exact": []
+ },
+ "Salt Lake City": {
+  "label": "Salt Lake City / Lehi",
+  "places": {
+   "ut": [
+    "salt lake city",
+    "lehi",
+    "draper",
+    "provo",
+    "south jordan",
+    "sandy"
+   ]
+  },
+  "any": [
+   "salt lake city"
+  ],
+  "exact": []
+ },
+ "Miami": {
+  "label": "Miami area",
+  "places": {
+   "fl": [
+    "miami",
+    "miami beach",
+    "fort lauderdale",
+    "coral gables",
+    "boca raton"
+   ]
+  },
+  "any": [
+   "miami"
+  ],
+  "exact": [
+   "miami"
+  ]
+ },
+ "Minneapolis": {
+  "label": "Minneapolis / St. Paul",
+  "places": {
+   "mn": [
+    "minneapolis",
+    "st. paul",
+    "saint paul",
+    "bloomington",
+    "eden prairie"
+   ]
+  },
+  "any": [
+   "minneapolis"
+  ],
+  "exact": []
+ },
+ "Phoenix": {
+  "label": "Phoenix area",
+  "places": {
+   "az": [
+    "phoenix",
+    "scottsdale",
+    "tempe",
+    "chandler",
+    "mesa"
+   ]
+  },
+  "any": [
+   "phoenix"
+  ],
+  "exact": []
+ },
+ "Detroit/Ann Arbor": {
+  "label": "Detroit / Ann Arbor",
+  "places": {
+   "mi": [
+    "detroit",
+    "ann arbor",
+    "southfield",
+    "dearborn",
+    "troy",
+    "farmington hills"
+   ]
+  },
+  "any": [
+   "ann arbor",
+   "detroit"
+  ],
+  "exact": []
+ },
+ "Remote": {
+  "label": "Remote (US)",
+  "places": {},
+  "any": [
+   "remote"
+  ],
+  "exact": [
+   "united states",
+   "usa",
+   "us",
+   "united states of america",
+   "anywhere in the us",
+   "u.s."
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "grad_year": 2027,
+  "grad_month": 5,
+  "degree": "bachelors",
+  "internships_count_as_experience": true,
+  "primary_roles": ["backend", "fullstack"],
+  "ok_roles": ["infra", "data", "ml", "fde"],
+  "never_roles": ["embedded", "testing", "mobile"],
+  "skills": ["python", "java", "typescript", "react", "sql", "aws", "docker"],
+  "main_regions": ["NYC", "SF Bay", "Remote"],
+  "secondary_regions": ["Seattle", "Boston"],
+  "elsewhere": "top_tier",
+  "pay_floor": 110000,
+  "region_pay_floors": {"Remote": 100000},
+  "keep_unlisted_pay": true,
+  "needs_sponsorship": false,
+  "us_citizen": true,
+  "clearance": "willing",
+  "max_age_days": 7,
+  "sources": ["speedyapply", "simplify", "vanshb03", "company_boards"],
+  "notion": {"enabled": false, "database_id": ""}
+}

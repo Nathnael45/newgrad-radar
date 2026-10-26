@@ -1,0 +1,632 @@
+{
+ "top_tier": [
+  "adobe",
+  "affirm",
+  "airbnb",
+  "airtable",
+  "akuna",
+  "alphabet",
+  "amazon",
+  "anduril",
+  "anthropic",
+  "anysphere",
+  "apple",
+  "asana",
+  "atlassian",
+  "aurora",
+  "aws",
+  "benchling",
+  "blizzard",
+  "block",
+  "bloomberg",
+  "brex",
+  "bytedance",
+  "capital one",
+  "cash app",
+  "chime",
+  "citadel",
+  "citadel securities",
+  "cloudflare",
+  "cohere",
+  "coinbase",
+  "confluent",
+  "crowdstrike",
+  "cursor",
+  "d. e. shaw",
+  "d.e. shaw",
+  "databricks",
+  "datadog",
+  "de shaw",
+  "decagon",
+  "deel",
+  "discord",
+  "doordash",
+  "dropbox",
+  "duolingo",
+  "epic games",
+  "etsy",
+  "facebook",
+  "faire",
+  "figma",
+  "five rings",
+  "flexport",
+  "github",
+  "gitlab",
+  "glean",
+  "goldman sachs",
+  "google",
+  "gusto",
+  "harvey",
+  "hashicorp",
+  "hebbia",
+  "hrt",
+  "hudson river trading",
+  "imc",
+  "instacart",
+  "intuit",
+  "jane street",
+  "jpmorgan",
+  "jump trading",
+  "linear",
+  "linkedin",
+  "lucid",
+  "lyft",
+  "mastercard",
+  "mercury",
+  "meta",
+  "microsoft",
+  "mistral",
+  "mongodb",
+  "netflix",
+  "notion",
+  "nuro",
+  "nvidia",
+  "okta",
+  "openai",
+  "optiver",
+  "oracle",
+  "palantir",
+  "palo alto networks",
+  "paypal",
+  "perplexity",
+  "pinterest",
+  "plaid",
+  "qualtrics",
+  "ramp",
+  "reddit",
+  "retool",
+  "riot games",
+  "rippling",
+  "robinhood",
+  "roblox",
+  "salesforce",
+  "samsara",
+  "scale ai",
+  "servicenow",
+  "shopify",
+  "sierra",
+  "sig",
+  "snap",
+  "snowflake",
+  "spacex",
+  "spotify",
+  "square",
+  "squarespace",
+  "stripe",
+  "susquehanna",
+  "tesla",
+  "tiktok",
+  "tower research",
+  "twilio",
+  "twitch",
+  "two sigma",
+  "uber",
+  "valve",
+  "vercel",
+  "verkada",
+  "visa",
+  "watershed",
+  "wayfair",
+  "waymo",
+  "workday",
+  "x",
+  "yelp",
+  "zoom",
+  "zoox"
+ ],
+ "top_tier_exact_only": [
+  "sierra",
+  "block",
+  "x",
+  "sig",
+  "square",
+  "linear",
+  "mercury",
+  "aurora",
+  "lucid",
+  "valve",
+  "chime",
+  "visa",
+  "cursor",
+  "harvey",
+  "decagon",
+  "glean",
+  "faire",
+  "zoom",
+  "notion",
+  "discord",
+  "snap",
+  "ramp",
+  "imc",
+  "hrt",
+  "zoox",
+  "nuro",
+  "deel",
+  "gusto",
+  "okta",
+  "etsy",
+  "yelp",
+  "plaid",
+  "brex",
+  "retool",
+  "oracle",
+  "intuit",
+  "anthropic",
+  "openai",
+  "perplexity",
+  "mistral",
+  "cohere",
+  "github",
+  "gitlab",
+  "valve",
+  "confluent"
+ ],
+ "watchlist": [
+  {
+   "company": "Stripe",
+   "ats": "greenhouse",
+   "board": "stripe"
+  },
+  {
+   "company": "Databricks",
+   "ats": "greenhouse",
+   "board": "databricks"
+  },
+  {
+   "company": "Figma",
+   "ats": "greenhouse",
+   "board": "figma"
+  },
+  {
+   "company": "Robinhood",
+   "ats": "greenhouse",
+   "board": "robinhood"
+  },
+  {
+   "company": "Coinbase",
+   "ats": "greenhouse",
+   "board": "coinbase"
+  },
+  {
+   "company": "Airbnb",
+   "ats": "greenhouse",
+   "board": "airbnb"
+  },
+  {
+   "company": "Pinterest",
+   "ats": "greenhouse",
+   "board": "pinterest"
+  },
+  {
+   "company": "Discord",
+   "ats": "greenhouse",
+   "board": "discord"
+  },
+  {
+   "company": "Dropbox",
+   "ats": "greenhouse",
+   "board": "dropbox"
+  },
+  {
+   "company": "Datadog",
+   "ats": "greenhouse",
+   "board": "datadog"
+  },
+  {
+   "company": "Cloudflare",
+   "ats": "greenhouse",
+   "board": "cloudflare"
+  },
+  {
+   "company": "MongoDB",
+   "ats": "greenhouse",
+   "board": "mongodb"
+  },
+  {
+   "company": "Asana",
+   "ats": "greenhouse",
+   "board": "asana"
+  },
+  {
+   "company": "Brex",
+   "ats": "greenhouse",
+   "board": "brex"
+  },
+  {
+   "company": "Affirm",
+   "ats": "greenhouse",
+   "board": "affirm"
+  },
+  {
+   "company": "Twitch",
+   "ats": "greenhouse",
+   "board": "twitch"
+  },
+  {
+   "company": "Roblox",
+   "ats": "greenhouse",
+   "board": "roblox"
+  },
+  {
+   "company": "DoorDash",
+   "ats": "greenhouse",
+   "board": "doordashusa"
+  },
+  {
+   "company": "Instacart",
+   "ats": "greenhouse",
+   "board": "instacart"
+  },
+  {
+   "company": "Lyft",
+   "ats": "greenhouse",
+   "board": "lyft"
+  },
+  {
+   "company": "Reddit",
+   "ats": "greenhouse",
+   "board": "reddit"
+  },
+  {
+   "company": "Scale AI",
+   "ats": "greenhouse",
+   "board": "scaleai"
+  },
+  {
+   "company": "Samsara",
+   "ats": "greenhouse",
+   "board": "samsara"
+  },
+  {
+   "company": "Verkada",
+   "ats": "greenhouse",
+   "board": "verkada"
+  },
+  {
+   "company": "Gusto",
+   "ats": "greenhouse",
+   "board": "gusto"
+  },
+  {
+   "company": "Duolingo",
+   "ats": "greenhouse",
+   "board": "duolingo"
+  },
+  {
+   "company": "Flexport",
+   "ats": "greenhouse",
+   "board": "flexport"
+  },
+  {
+   "company": "Faire",
+   "ats": "greenhouse",
+   "board": "faire"
+  },
+  {
+   "company": "Vercel",
+   "ats": "greenhouse",
+   "board": "vercel"
+  },
+  {
+   "company": "Mercury",
+   "ats": "greenhouse",
+   "board": "mercury"
+  },
+  {
+   "company": "Chime",
+   "ats": "greenhouse",
+   "board": "chime"
+  },
+  {
+   "company": "Okta",
+   "ats": "greenhouse",
+   "board": "okta"
+  },
+  {
+   "company": "Twilio",
+   "ats": "greenhouse",
+   "board": "twilio"
+  },
+  {
+   "company": "Squarespace",
+   "ats": "greenhouse",
+   "board": "squarespace"
+  },
+  {
+   "company": "Anthropic",
+   "ats": "greenhouse",
+   "board": "anthropic"
+  },
+  {
+   "company": "Glean",
+   "ats": "greenhouse",
+   "board": "gleanwork"
+  },
+  {
+   "company": "Watershed",
+   "ats": "greenhouse",
+   "board": "watershed"
+  },
+  {
+   "company": "Nuro",
+   "ats": "greenhouse",
+   "board": "nuro"
+  },
+  {
+   "company": "Waymo",
+   "ats": "greenhouse",
+   "board": "waymo"
+  },
+  {
+   "company": "SpaceX",
+   "ats": "greenhouse",
+   "board": "spacex"
+  },
+  {
+   "company": "Jane Street",
+   "ats": "greenhouse",
+   "board": "janestreet"
+  },
+  {
+   "company": "IMC Trading",
+   "ats": "greenhouse",
+   "board": "imc"
+  },
+  {
+   "company": "Sigma Computing",
+   "ats": "greenhouse",
+   "board": "sigmacomputing"
+  },
+  {
+   "company": "PagerDuty",
+   "ats": "greenhouse",
+   "board": "pagerduty"
+  },
+  {
+   "company": "Elastic",
+   "ats": "greenhouse",
+   "board": "elastic"
+  },
+  {
+   "company": "GitLab",
+   "ats": "greenhouse",
+   "board": "gitlab"
+  },
+  {
+   "company": "Airtable",
+   "ats": "greenhouse",
+   "board": "airtable"
+  },
+  {
+   "company": "Calendly",
+   "ats": "greenhouse",
+   "board": "calendly"
+  },
+  {
+   "company": "Toast",
+   "ats": "greenhouse",
+   "board": "toast"
+  },
+  {
+   "company": "Rubrik",
+   "ats": "greenhouse",
+   "board": "rubrik"
+  },
+  {
+   "company": "Pure Storage",
+   "ats": "greenhouse",
+   "board": "purestorage"
+  },
+  {
+   "company": "SingleStore",
+   "ats": "greenhouse",
+   "board": "singlestore"
+  },
+  {
+   "company": "Cockroach Labs",
+   "ats": "greenhouse",
+   "board": "cockroachlabs"
+  },
+  {
+   "company": "Block",
+   "ats": "greenhouse",
+   "board": "block"
+  },
+  {
+   "company": "Palantir",
+   "ats": "lever",
+   "board": "palantir"
+  },
+  {
+   "company": "Spotify",
+   "ats": "lever",
+   "board": "spotify"
+  },
+  {
+   "company": "Shield AI",
+   "ats": "lever",
+   "board": "shieldai"
+  },
+  {
+   "company": "WeRide",
+   "ats": "lever",
+   "board": "weride"
+  },
+  {
+   "company": "Zoox",
+   "ats": "lever",
+   "board": "zoox"
+  },
+  {
+   "company": "Ramp",
+   "ats": "ashby",
+   "board": "ramp"
+  },
+  {
+   "company": "Notion",
+   "ats": "ashby",
+   "board": "notion"
+  },
+  {
+   "company": "OpenAI",
+   "ats": "ashby",
+   "board": "openai"
+  },
+  {
+   "company": "Linear",
+   "ats": "ashby",
+   "board": "linear"
+  },
+  {
+   "company": "Harvey",
+   "ats": "ashby",
+   "board": "harvey"
+  },
+  {
+   "company": "Sierra",
+   "ats": "ashby",
+   "board": "sierra"
+  },
+  {
+   "company": "Perplexity",
+   "ats": "ashby",
+   "board": "perplexity"
+  },
+  {
+   "company": "Cursor (Anysphere)",
+   "ats": "ashby",
+   "board": "cursor"
+  },
+  {
+   "company": "Cohere",
+   "ats": "ashby",
+   "board": "cohere"
+  },
+  {
+   "company": "Replit",
+   "ats": "ashby",
+   "board": "replit"
+  },
+  {
+   "company": "Supabase",
+   "ats": "ashby",
+   "board": "supabase"
+  },
+  {
+   "company": "Modal",
+   "ats": "ashby",
+   "board": "modal"
+  },
+  {
+   "company": "Vanta",
+   "ats": "ashby",
+   "board": "vanta"
+  },
+  {
+   "company": "Hex",
+   "ats": "ashby",
+   "board": "hex"
+  },
+  {
+   "company": "ElevenLabs",
+   "ats": "ashby",
+   "board": "elevenlabs"
+  },
+  {
+   "company": "Applied Intuition",
+   "ats": "ashby",
+   "board": "applied"
+  },
+  {
+   "company": "Chalk",
+   "ats": "ashby",
+   "board": "chalk"
+  },
+  {
+   "company": "Pylon",
+   "ats": "ashby",
+   "board": "pylon"
+  },
+  {
+   "company": "Valon",
+   "ats": "ashby",
+   "board": "valon"
+  },
+  {
+   "company": "Lightfield",
+   "ats": "ashby",
+   "board": "lightfield"
+  },
+  {
+   "company": "Nooks",
+   "ats": "ashby",
+   "board": "nooks"
+  },
+  {
+   "company": "Commure",
+   "ats": "ashby",
+   "board": "commure"
+  },
+  {
+   "company": "Crusoe",
+   "ats": "ashby",
+   "board": "crusoe"
+  },
+  {
+   "company": "Quora",
+   "ats": "ashby",
+   "board": "quora"
+  },
+  {
+   "company": "Amplitude",
+   "ats": "ashby",
+   "board": "amplitude"
+  },
+  {
+   "company": "Decagon",
+   "ats": "ashby",
+   "board": "decagon"
+  },
+  {
+   "company": "Baseten",
+   "ats": "ashby",
+   "board": "baseten"
+  },
+  {
+   "company": "Writer",
+   "ats": "ashby",
+   "board": "writer"
+  },
+  {
+   "company": "Snowflake",
+   "ats": "ashby",
+   "board": "snowflake"
+  },
+  {
+   "company": "Benchling",
+   "ats": "ashby",
+   "board": "benchling"
+  }
+ ],
+ "watchlist_title_regex": "new grad|graduate|early[- ]career|university|college|entry[- ]level|junior|associate|apprentice|rotational|campus|\\b20(26|27)\\b|\\b(i|1)\\b\\s*($|[-\u2013,(])|engineer i\\b|developer i\\b"
+}

@@ -1,0 +1,31 @@
+{
+ "speedyapply": {
+  "description": "speedyapply/<year>-SWE-College-Jobs (US new grad list, has salary + FAANG/Quant tags)",
+  "url": "https://raw.githubusercontent.com/speedyapply/{year}-SWE-College-Jobs/main/NEW_GRAD_USA.md",
+  "parser": "speedyapply",
+  "default": true
+ },
+ "simplify": {
+  "description": "SimplifyJobs/New-Grad-Positions (large, very actively maintained)",
+  "url": "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/README.md",
+  "parser": "simplify",
+  "default": true
+ },
+ "vanshb03": {
+  "description": "vanshb03/New-Grad-<year> (picks up many startups and YC roles)",
+  "url": "https://raw.githubusercontent.com/vanshb03/New-Grad-{year}/dev/README.md",
+  "parser": "vanshb03",
+  "default": true
+ },
+ "jobright": {
+  "description": "jobright-ai new grad SWE list (big daily volume; job pages are rate-limited, so it is read slowly)",
+  "url": "https://raw.githubusercontent.com/jobright-ai/{year_minus_1}-Software-Engineer-New-Grad/master/README.md",
+  "parser": "jobright",
+  "default": false
+ },
+ "company_boards": {
+  "description": "Early-career postings straight from ~90 companies' Greenhouse/Lever/Ashby job boards (data/companies.json)",
+  "parser": "watchlist",
+  "default": true
+ }
+}
