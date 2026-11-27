@@ -27,5 +27,15 @@
   "description": "Early-career postings straight from ~90 companies' Greenhouse/Lever/Ashby job boards (data/companies.json)",
   "parser": "watchlist",
   "default": true
+ },
+ "yc": {
+  "description": "Y Combinator's public job board (ycombinator.com/jobs): startup software roles, ones asking 2+ years dropped",
+  "parser": "yc",
+  "default": true
+ },
+ "hn": {
+  "description": "This month's Hacker News 'Ask HN: Who is hiring?' thread (posts mentioning new grad / junior / entry-level; some only take email)",
+  "parser": "hn",
+  "default": true
  }
 }
