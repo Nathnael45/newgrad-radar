@@ -247,6 +247,84 @@ def fetch_company_boards():
         return [j for batch in ex.map(board_jobs, COMPANIES["watchlist"]) for j in batch]
 
 
+# shortcut: fixed city pages (YC's "all" page only lists the newest few); add a slug here if your area has a YC page
+YC_PAGES = ["", "/new-york", "/san-francisco", "/los-angeles", "/seattle", "/remote"]
+
+
+def yc_age(created):
+    """YC's 'about 1 month' / 'over 1 year' / '3 hours' -> '30d' / '365d' / '0d'."""
+    m = re.search(r"(\d+)\s*(minute|hour|day|week|month|year)", created or "")
+    if not m:
+        return ""
+    return f"{int(m.group(1)) * {'minute': 0, 'hour': 0, 'day': 1, 'week': 7, 'month': 30, 'year': 365}[m.group(2)]}d"
+
+
+def fetch_yc():
+    """Full-time software roles from YC's public job board (ycombinator.com/jobs), skipping ones that ask 2+ years."""
+    jobs = {}
+    for suffix in YC_PAGES:
+        try:
+            page = get(f"https://www.ycombinator.com/jobs/role/software-engineer{suffix}")
+            props = json.loads(html.unescape(re.search(r'data-page="([^"]+)"', page).group(1)))["props"]
+        except Exception as e:
+            print(f"  yc{suffix or ' (all)'}: failed ({type(e).__name__})", file=sys.stderr)
+            continue
+        for j in props.get("jobPostings", []):
+            if j.get("type") != "Full-time" or re.match(r"\s*([2-9]|\d\d)\+? years", j.get("minExperience") or ""):
+                continue
+            url = "https://www.ycombinator.com" + j["url"]
+            jobs[url] = {"source": "YC", "tier": "", "company": j["companyName"], "title": j["title"],
+                         "location": j.get("location") or "", "salary_text": j.get("salaryRange") or "", "url": url,
+                         "age": yc_age(j.get("createdAt")), "flags": []}
+    return list(jobs.values())
+
+
+HN_EARLY = re.compile(r"(?i)new[- ]grad|recent grad|new college|university grad|entry[- ]level|junior|early[- ]career|"
+                      r"\b0\s*[-–+]\s*[1-3]\+? years|all (career |experience )?(stages|levels)")
+HN_ROLE = re.compile(r"(?i)engineer|developer|\bswe\b|software|full[- ]?stack|backend|technical staff")
+EMAIL_RX = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+
+
+def hn_text(item_text):
+    return html.unescape(re.sub(r"<p>", "\n", item_text or "")).replace("<a href=", " <a href=")
+
+
+def fetch_hn():
+    """Early-career software posts from this month's Hacker News 'Ask HN: Who is hiring?' thread (one job per post)."""
+    try:
+        hits = get("https://hn.algolia.com/api/v1/search_by_date?tags=story,author_whoishiring&query=hiring&hitsPerPage=5",
+                   as_json=True)["hits"]
+        story = next(h for h in hits if h["title"].lower().startswith("ask hn: who is hiring"))
+        kids = get(f"https://hn.algolia.com/api/v1/items/{story['objectID']}", as_json=True)["children"]
+    except Exception as e:
+        print(f"  hn: failed ({type(e).__name__})", file=sys.stderr)
+        return []
+    jobs = []
+    for c in kids:
+        raw = hn_text(c.get("text"))
+        text = strip_html(raw)
+        if not text or not HN_EARLY.search(text):
+            continue
+        # HN convention: first line is "Company | Role | Location | ..."
+        header = strip_html(raw.split("\n")[0])[:300]
+        segs = [s.strip() for s in header.split("|") if s.strip()]
+        role = next((s for s in segs[1:] if HN_ROLE.search(s)), None)
+        if not segs or not role:
+            continue
+        links = [l for l in re.findall(r'href="([^"]+)"', raw) if "ycombinator.com" not in l]
+        emails = EMAIL_RX.findall(text)
+        jobs.append({"source": "HN", "tier": "", "company": segs[0][:80],
+                     "title": re.sub(r"(?i)\s*(to|and|&|/|-)\s*senior\b", "", role)[:120],
+                     "location": "; ".join(segs[1:]), "salary_text": " ".join(re.findall(r"\$[\d,.]+\s*[kK]?", header)),
+                     "url": f"https://news.ycombinator.com/item?id={c['id']}",
+                     "age": f"{(TODAY - dt.date.fromisoformat(c['created_at'][:10])).days}d", "flags": [],
+                     # no link to apply anywhere in the post: it only takes email
+                     "apply_email": emails[0] if emails and not links else ""})
+    return jobs
+
+
+FETCHERS = {"yc": fetch_yc, "hn": fetch_hn}  # sources read from an API/page instead of a markdown list
+
 PARSERS = {
     "speedyapply": parse_speedyapply,
     "simplify": parse_simplify,
@@ -420,6 +498,9 @@ def fetch_jd(url):
         return dict(text=strip_html(j.get("content", "")), location=(j.get("location") or {}).get("name", ""), pay=pay, method="greenhouse")
 
     try:
+        if host == "news.ycombinator.com" and "id" in parse_qs(u.query):
+            j = get(f"https://hn.algolia.com/api/v1/items/{parse_qs(u.query)['id']}", as_json=True)
+            return dict(text=strip_html(hn_text(j.get("text"))), location="", pay="", method="hn")
         if "greenhouse.io" in host and "jobs" in parts:
             board = parse_qs(u.query).get("for") or parts[parts.index("jobs") - 1]
             return gh(board, parts[parts.index("jobs") + 1])
@@ -576,7 +657,8 @@ def collect():
         if not defn or defn["parser"] == "watchlist":
             continue
         try:
-            parsed = PARSERS[defn["parser"]](get(source_url(defn), timeout=60))
+            parser = defn["parser"]
+            parsed = FETCHERS[parser]() if parser in FETCHERS else PARSERS[parser](get(source_url(defn), timeout=60))
             print(f"{name}: {len(parsed)} listings", file=sys.stderr)
             jobs += parsed
         except Exception as e:
@@ -697,7 +779,7 @@ def collect():
                 "key": j["key"], "sig": j["sig"], "url": j["url"], "source": j["source"], "company": j["company"],
                 "title": j["title"], "tier": j.get("tier") or ("Top company" if is_top_tier(j) else ""),
                 "location": all_loc[:300], "regions": ordered, "pay": jd.get("pay") or j.get("salary_text", ""),
-                "pay_max": best_pay, "age": j["age"], "jd_method": jd["method"], "min_yoe": y,
+                "pay_max": best_pay, "age": j["age"], "jd_method": jd["method"], "min_yoe": y, "apply_email": j.get("apply_email", ""),
                 "snippets": snippets(text) if text else [], "text": text[:8000],
             })
     save_seen(seen)
@@ -753,12 +835,17 @@ def publish(path):
             continue
         x = cands[d["idx"]]
         age = age_days(x["age"])
+        why, email = d["reason"], x.get("apply_email")
+        if email:
+            why = f"Apply by email: {email} (no application form). {why}"
+        if x["source"] == "HN":  # keep the post link even when Apply link is a mailto
+            why = f"{why} HN post: {x['url']}"
         rows.append({
             "best_match": d["fit"] == "S" and area_rank(x["regions"]) == 1,
             "role": x["title"], "company": x["company"], "new_grad_check": NG_LABEL[d["ng"]], "fit": FIT_LABEL[d["fit"]],
-            "why": d["reason"], "regions": x["regions"] or ["Other"], "tier": x["tier"] or "Other",
+            "why": why, "regions": x["regions"] or ["Other"], "tier": x["tier"] or "Other",
             "location": x["location"][:200], "pay": (x["pay"] or "Not listed")[:120], "pay_max": x.get("pay_max"),
-            "apply_link": x["url"], "source": x["source"],
+            "apply_link": f"mailto:{email}" if email else x["url"], "source": x["source"],
             "posted": (TODAY - dt.timedelta(days=age)).isoformat() if age is not None else "",
             "added": dt.datetime.now().isoformat(timespec="minutes"),
         })

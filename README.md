@@ -22,6 +22,10 @@ No dependencies beyond Python 3.9+.
      [vanshb03](https://github.com/vanshb03) and (optional) jobright new-grad lists
    - ~90 companies' own job boards via public Greenhouse / Lever / Ashby feeds (`data/companies.json`), so new
      postings show up before the lists pick them up
+   - startups: [Y Combinator's job board](https://www.ycombinator.com/jobs) (software roles; ones asking 2+ years are
+     dropped) and this month's Hacker News "Ask HN: Who is hiring?" thread (posts that mention new grad / junior /
+     entry-level). HN matches always link the post; posts with no application link get a `mailto:` Apply link and
+     "Apply by email" in *why*
 2. **Filters** on list data: posting age, your locations, seniority words in the title, roles you never want, grad
    year in the title, pay floors, non-US locations, and duplicates (same job, different link or list).
 3. **Reads each job description** (Greenhouse, Lever, Ashby, Workday, SmartRecruiters, Workable, schema.org JobPosting,
